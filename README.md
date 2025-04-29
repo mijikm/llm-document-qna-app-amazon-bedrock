@@ -162,7 +162,7 @@ Access granted.
   - This will ingest the PDF files, convert those into vector stores, and store them under faiss_index.
   - This process may take a few minutes depending on the size of the PDF files.
 7. Once Vector Stores have been updated, you will see `Done - Vector Store Updated!`
-8. Enter a question and click on either `Claude Output` or `Llama3 Output`
+8. Enter a question and click on either `Claude Output` or `Mistral Output`
   - Simple Questions for RBA Financial Stability Review
     - "What are the key risks to Australia's financial system?"
     - "How has household debt changed recently?"
@@ -175,15 +175,6 @@ Access granted.
     - "What is the trend in business loan arrears?"
     - "What stress tests has the RBA conducted on banks?"
 9. Check the response
-  - Question: "What is the RBA's outlook for the housing market?"
-  - Answer - Claude Output:
-    > Based on the context provided, I have summarised the RBA's outlook for the housing market in the following 5 bullet points:
-    
-    > - Pressure on existing mortgage holders is expected to ease further over the coming year due to higher incomes and lower interest rates supporting borrowers' cash flows.
-    
-    > - The share of borrowers with negative cash flows is projected to decline further based on the RBA's central forecasts for real wage growth, a marginally increasing unemployment rate, and a declining cash rate path.
-    
-    > - Regulators will closely monitor potential housing-related vulnerabilities that could emerge over time from any easing of financial conditions, such as excessive household debt.
-    
-    > - The share of new lending to property investors has increased over the past two years. Investor activity could intensify further if interest rates decline as currently expected.
-    > - APRA's prudential framework and macroprudential settings play an important role in reinforcing resilience in the housing market. The Council of Financial Regulators will closely monitor evolving household vulnerabilities.
+  - Question: What is the RBA's outlook for the housing market? Summarise it with 5 bullet points.
+  - Answer - Claude Output: [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Claude_Output.jpg) 
+  - Answer - Mistral Output: [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Mistral_Output.jpg)
