@@ -1,5 +1,5 @@
-# llm-document-qna-app-amazon-bedrock
-- llm-document-qna-app-amazon-bedrock
+### Use Case for this Project
+- A Q&A chatbot based on documents allows users to get answers to their questions related to the documents.
 
 ### AWS Services
 - Amazon Bedrock
@@ -7,9 +7,6 @@
 - Amazon Titan Text Embeddings
   - A text embeddings model that converts natural language text—consisting of single words, phrases, or even large documents—into numerical representations that can be used to power use cases such as search, personalization, and clustering based on semantic similarity.
     
-### Use Case for this Project
-- A Q&A chatbot based on documents allows users to get answers to their questions related to the documents.
-
 ### How does it work?
 - Step 1: Ingest Data
   - PDF documents are ingested.
@@ -25,12 +22,51 @@
     3) LLM model will provide an answer.
 - Langchain along with LLM Model from Amazon Bedrock
 
-### Prerequisites
-- Conda
-  -  Can be installed via Miniconda installer which is a lightweight version of the Anaconda Distribution installer that only provides conda, its dependencies, and a few other select packages.
-  -  Added naconda3 to my PATH environment variable
-- Visual Studio Code (GitHub Copilot integrated)
-- AWS account (Root user)
+### Document Q & A Application - Use Case
+1. Update required_libraries.txt to have the following:
+  - `boto3`
+  - `awscli`
+  - `pypdf`
+  - `langchain`
+  - `langchain_community`
+  - `streamlit`
+  - `faiss-cpu`
+  - `cryptography>=3.1`
+2. Install required libraries
+  - Run `pip install -r required_libraries.txt`
+3. Create a `data` folder and place a PDF file to be used for the app
+  - `RBA_financial-stability-review-2025-04.pdf`
+4. Build a Python Script
+  - Create a new file called `app.py`
+  - Build a Python Script here
+5. Open the app as a new tab
+  - Run the command in cmd: `streamlit run app.py`
+6. Click on the button `Vector Stores Update`
+  - This will ingest the PDF files, convert those into vector stores, and store them under faiss_index.
+  - This process may take a few minutes depending on the size of the PDF files.
+7. Once Vector Stores have been updated, you will see `Done - Vector Store Updated!`
+8. Enter a question and click on either `Claude Output` or `Mistral Output`
+  - Simple Questions for RBA Financial Stability Review
+    - "What are the key risks to Australia's financial system?"
+    - "How has household debt changed recently?"
+    - "What is the RBA's outlook for the housing market?"
+    - "What trends are observed in commercial property lending?"
+    - "How are banks performing in terms of capital and liquidity?"
+    - "What is the RBA's view on global economic risks?"
+    - "What measures has the RBA suggested to strengthen financial stability?"
+    - "How vulnerable are households to rising interest rates?"
+    - "What is the trend in business loan arrears?"
+    - "What stress tests has the RBA conducted on banks?"
+9. Check the response
+  - Question: What is the RBA's outlook for the housing market? Summarise it with 5 bullet points.
+  - Answer - Claude Output:
+  - [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Claude_Output.jpg) 
+  - Answer - Mistral Output:
+  - [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Mistral_Output.jpg)
+
+
+<hr style="border: 1px solid #000; width: 100%; border-width: 0.5px;" />
+
 
 ### Official Resources
 - Invoke Model API Documentation:​ [Amazon Bedrock User Guide](https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-runtime_example_bedrock-runtime_InvokeModel_MetaLlama3_section.html)
@@ -42,6 +78,13 @@
 ### Tips
 - Set up budget associated with AWS account
   - AWS has  "Zero spend budget" template - which notifies you once your spending exceeds $0.01 which is above the AWS Free Tier limits.
+
+### Prerequisites
+- Conda
+  -  Can be installed via Miniconda installer which is a lightweight version of the Anaconda Distribution installer that only provides conda, its dependencies, and a few other select packages.
+  -  Added naconda3 to my PATH environment variable
+- Visual Studio Code (GitHub Copilot integrated)
+- AWS account (Root user)
 
 ### Set up
 **Visual Studio Code**
@@ -138,43 +181,3 @@ Access granted.
     > 3. Review customer service protocols to ensure staff are providing an adequate level of support during the loan process
 
     > The key areas highlighted in the feedback are wait times/process efficiency, staff helpfulness, and customer service. Addressing these areas by improving processes, enhancing staff training, and refining customer service protocols could help resolve the issues surfaced in this complaint. Let me know if you need any clarification or have additional questions!
-
-**Document Q & A Application - Use Case**
-1. Update required_libraries.txt to have the following:
-  - `boto3`
-  - `awscli`
-  - `pypdf`
-  - `langchain`
-  - `langchain_community`
-  - `streamlit`
-  - `faiss-cpu`
-  - `cryptography>=3.1`
-2. Install required libraries
-  - Run `pip install -r required_libraries.txt`
-3. Create a `data` folder and place a PDF file to be used for the app
-  - `RBA_financial-stability-review-2025-04.pdf`
-4. Build a Python Script
-  - Create a new file called `app.py`
-  - Build a Python Script here
-5. Open the app as a new tab
-  - Run the command in cmd: `streamlit run app.py`
-6. Click on the button `Vector Stores Update`
-  - This will ingest the PDF files, convert those into vector stores, and store them under faiss_index.
-  - This process may take a few minutes depending on the size of the PDF files.
-7. Once Vector Stores have been updated, you will see `Done - Vector Store Updated!`
-8. Enter a question and click on either `Claude Output` or `Mistral Output`
-  - Simple Questions for RBA Financial Stability Review
-    - "What are the key risks to Australia's financial system?"
-    - "How has household debt changed recently?"
-    - "What is the RBA's outlook for the housing market?"
-    - "What trends are observed in commercial property lending?"
-    - "How are banks performing in terms of capital and liquidity?"
-    - "What is the RBA's view on global economic risks?"
-    - "What measures has the RBA suggested to strengthen financial stability?"
-    - "How vulnerable are households to rising interest rates?"
-    - "What is the trend in business loan arrears?"
-    - "What stress tests has the RBA conducted on banks?"
-9. Check the response
-  - Question: What is the RBA's outlook for the housing market? Summarise it with 5 bullet points.
-  - Answer - Claude Output: [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Claude_Output.jpg) 
-  - Answer - Mistral Output: [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Mistral_Output.jpg)
