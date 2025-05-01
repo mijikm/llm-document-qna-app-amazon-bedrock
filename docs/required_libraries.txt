@@ -1,0 +1,10 @@
+# boto3: The Amazon Web Services (AWS) SDK for Python, used to interact with AWS services programmatically.
+# awscli: The AWS Command Line Interface, used to manage AWS services from the command line.
+boto3
+awscli
+pypdf
+langchain
+langchain_community
+streamlit
+faiss-cpu
+cryptography>=3.1
