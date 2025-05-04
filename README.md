@@ -62,7 +62,7 @@
   - Answer - Claude Output:
   - [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Claude_Output.jpg) 
   - Answer - Mistral Output:
-  - [<img style="float: left" width="600" src="images/Claude_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Mistral_Output.jpg)
+  - [<img style="float: left" width="600" src="images/Mistral_Output.jpg">](https://github.com/mijikm/llm-document-qna-app-amazon-bedrock/blob/main/images/Mistral_Output.jpg)
 
 
 <hr style="border: 1px solid #000; width: 100%; border-width: 0.5px;" />
