@@ -1,5 +1,5 @@
 ### Use Case for this Project
-- A Q&A chatbot based on documents allows users to get answers to their questions related to the documents.
+- A Q&A application based on documents allows users to get answers to their questions related to the documents.
 
 ### AWS Services
 - Amazon Bedrock
